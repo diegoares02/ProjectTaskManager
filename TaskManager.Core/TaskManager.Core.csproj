@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Application\Projects\**" />
+    <Compile Remove="Application\ProjectUsers\**" />
+    <Compile Remove="Application\Roles\**" />
+    <Compile Remove="Application\Users\**" />
+    <EmbeddedResource Remove="Application\Projects\**" />
+    <EmbeddedResource Remove="Application\ProjectUsers\**" />
+    <EmbeddedResource Remove="Application\Roles\**" />
+    <EmbeddedResource Remove="Application\Users\**" />
+    <None Remove="Application\Projects\**" />
+    <None Remove="Application\ProjectUsers\**" />
+    <None Remove="Application\Roles\**" />
+    <None Remove="Application\Users\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
   </ItemGroup>

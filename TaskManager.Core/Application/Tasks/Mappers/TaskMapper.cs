@@ -17,12 +17,12 @@ namespace TaskManager.Core.Application.Tasks.Mappers
                 ProjectId = task.ProjectId,
                 Title = task.Title,
                 Description = task.Description,
-                DueDate = task.DueDate,
+                DueDate = task.DueDate?.ToString("yyyy-MM-dd") ?? "",
                 Priority = task.Priority,
                 Status = task.Status,
                 AssignedTo = task.AssignedTo,
-                CreatedAt = task.CreatedAt,
-                UpdatedAt = task.UpdatedAt
+                CreatedAt = task.CreatedAt.ToString("yyyy-MM-dd") ?? "",
+                UpdatedAt = task.UpdatedAt.ToString("yyyy-MM-dd") ?? ""
             };
         }
 
@@ -39,12 +39,12 @@ namespace TaskManager.Core.Application.Tasks.Mappers
                 ProjectId = taskDto.ProjectId,
                 Title = taskDto.Title,
                 Description = taskDto.Description,
-                DueDate = taskDto.DueDate,
+                DueDate = taskDto.DueDate is not null ? DateTime.Parse(taskDto.DueDate) : null,
                 Priority = taskDto.Priority,
                 Status = taskDto.Status,
                 AssignedTo = taskDto.AssignedTo,
-                CreatedAt = taskDto.CreatedAt,
-                UpdatedAt = taskDto.UpdatedAt
+                CreatedAt = DateTime.Parse(taskDto.CreatedAt),
+                UpdatedAt = DateTime.Parse(taskDto.UpdatedAt)
             };
         }
     }

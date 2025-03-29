@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using Microsoft.Data.SqlClient;
 using TaskManager.Core.Application.Interfaces;
+using TaskManager.Core.Application.Tasks.Commands;
 using TaskManager.Core.Domain.Interfaces;
 
 namespace TaskManagement.Infrastructure.Data.Repositories
@@ -35,8 +36,8 @@ namespace TaskManagement.Infrastructure.Data.Repositories
                                 Title = (string)reader["title"],
                                 Description = (string)reader["description"],
                                 DueDate = reader["due_date"] == DBNull.Value ? null : (DateTime?)reader["due_date"],
-                                Priority = (TaskManager.Core.Domain.Entities.TaskPriority)reader["priority"],
-                                Status = (TaskManager.Core.Domain.Entities.TaskStatus)reader["status"],
+                                Priority = (string)reader["priority"],
+                                Status = (string)reader["status"],
                                 AssignedTo = reader["assigned_to"] == DBNull.Value ? null : (int?)reader["assigned_to"],
                                 CreatedAt = (DateTime)reader["created_at"],
                                 UpdatedAt = (DateTime)reader["updated_at"]
@@ -70,8 +71,8 @@ namespace TaskManagement.Infrastructure.Data.Repositories
                                 Title = (string)reader["title"],
                                 Description = (string)reader["description"],
                                 DueDate = reader["due_date"] == DBNull.Value ? null : (DateTime?)reader["due_date"],
-                                Priority = (TaskManager.Core.Domain.Entities.TaskPriority)reader["priority"],
-                                Status = (TaskManager.Core.Domain.Entities.TaskStatus)reader["status"],
+                                Priority = (string)reader["priority"],
+                                Status = (string)reader["status"],
                                 AssignedTo = reader["assigned_to"] == DBNull.Value ? null : (int?)reader["assigned_to"],
                                 CreatedAt = (DateTime)reader["created_at"],
                                 UpdatedAt = (DateTime)reader["updated_at"]
@@ -105,8 +106,8 @@ namespace TaskManagement.Infrastructure.Data.Repositories
                                 Title = (string)reader["title"],
                                 Description = (string)reader["description"],
                                 DueDate = reader["due_date"] == DBNull.Value ? null : (DateTime?)reader["due_date"],
-                                Priority = (TaskManager.Core.Domain.Entities.TaskPriority)reader["priority"],
-                                Status = (TaskManager.Core.Domain.Entities.TaskStatus)reader["status"],
+                                Priority = (string)reader["priority"],
+                                Status = (string)reader["status"],
                                 AssignedTo = reader["assigned_to"] == DBNull.Value ? null : (int?)reader["assigned_to"],
                                 CreatedAt = (DateTime)reader["created_at"],
                                 UpdatedAt = (DateTime)reader["updated_at"]

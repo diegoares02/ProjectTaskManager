@@ -83,5 +83,10 @@
     <Build Include="dbo\Stored Procedures\GetProjectUsers.sql" />
     <Build Include="dbo\Stored Procedures\GetUserTasks.sql" />
     <Build Include="dbo\Stored Procedures\GetProjectTasks.sql" />
+    <Build Include="dbo\Stored Procedures\ReadTask.sql" />
+    <Build Include="dbo\Stored Procedures\CheckProjectIdExists.sql" />
+    <Build Include="dbo\Stored Procedures\CheckUserIdExists.sql" />
+    <Build Include="dbo\Stored Procedures\CheckTaskTitleExists.sql" />
+    <Build Include="dbo\Stored Procedures\CheckTaskIdExists.sql" />
   </ItemGroup>
 </Project>

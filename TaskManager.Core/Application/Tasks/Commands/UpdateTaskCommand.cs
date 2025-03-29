@@ -2,7 +2,7 @@
 
 namespace TaskManager.Core.Application.Tasks.Commands
 {
-    public class UpdateTaskCommand : IRequest<Task>
+    public class UpdateTaskCommand : IRequest<Domain.Entities.Task>
     {
         public int TaskId { get; set; }
         public int ProjectId { get; set; }

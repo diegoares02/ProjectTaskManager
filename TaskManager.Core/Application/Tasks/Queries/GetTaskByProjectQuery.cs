@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace TaskManager.Core.Application.Tasks.Queries
 {
-    internal class GetTaskByProjectQuery
+    public class GetTaskByProjectQuery : IRequest<Domain.Entities.Task>
     {
+        public int ProjectId { get; set; }
+
+        public GetTaskByProjectQuery(int projectId)
+        {
+            ProjectId = projectId;
+        }
     }
 }
